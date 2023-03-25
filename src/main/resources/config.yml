@@ -1,0 +1,55 @@
+Database:
+  IP: 127.0.0.1:3306
+  Database: rankup
+  User: root
+  Password: ""
+
+
+machines:
+  Cash:
+    entity-name: "&2$&a{amount}"
+    heath-initial: 100
+    command: "cash add {player} {amount}"
+    icon:
+      material: 7
+      display-name: '&eMáquina'
+      lore:
+        - '&fTipo: &7Carne de Porco'
+        - '&fQuantidade: &7{amount}x'
+        - ''
+        - '&fVelocidade: &7{speed}s'
+        - '&fDrops p/ geração: &7{drops}x'
+        - ''
+    hologram-lines:
+      - '&e&lMáquina'
+      - '&fTipo: &7Carne de Porco'
+      - '&fQuantidade: &7{amount}x'
+      - ''
+      - '{bar}'
+    hologram-height: 2.2
+    command-pay: "cash add {player} {cash}"
+
+upgrades:
+  drop:
+    0:
+      indentifier: 0
+      price: 0 #coins
+      value: 1 #multiplier of drop
+    1:
+      indentifier: 1
+      price: 5000 #coins
+      value: 3 #multiplier of drop
+
+  times:
+    0:
+      indentifier: 0
+      price: 0 #coins
+      value: 30 #segundos
+    1:
+      indentifier: 1
+      price: 500 #coins
+      value: 15 #segundos
+    2:
+      indentifier: 2
+      price: 5000 #coins
+      value: 5 #segundos
